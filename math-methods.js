@@ -8,19 +8,26 @@ console.log(Math.PI);
 // Bereken de omtrek van een cirkel met een diameter van 4 en log dit in de terminal. De eenheid (cm, meters, etc. maakt niet uit).
 // Tip: de formule is omtrek = diameter * pi
 // ---- Verwachte uitkomst: 12.566370614359172
+let diameter = 4;
 
+const omtrek = (diam) => {
+    return diameter * Math.PI;
+};
+
+console.log(`\nomtrek (for a circle with a ${diameter} diamater is: ${omtrek(diameter)}\n`);
 
 /* Opdracht 2: */
 // Bereken de omtrek van een cirkel met een diameter van 12 en rond dit af naar een heel getal. Log dit in de terminal.
 // ---- Verwachte uitkomst: 38
 
-
+diameter = 12;
+console.log(Math.round(omtrek(diameter)));
 
 /* Opdracht 3: */
 // Bereken de wortel van 9 en log dit in de terminal
 // ---- Verwachte uitkomst: 3
 
-
+console.log(`\n${Math.sqrt(9)}\n`);
 
 /* Opdracht 4: */
 // Genereer een willekeurig getal tussen de 0 en 1 en doe dan een check:
@@ -28,3 +35,7 @@ console.log(Math.PI);
 // * is het willekeurige getal kleiner dan 0.5 ? Log dan het getal met "Het glas is half leeg" in de terminal
 // Tip: iedere keer als je het script opnieuw draait (wel even een extra spatie toevoegen o.i.d.) is dit getal anders ;)
 // ---- Verwachte uitkomst: Bijbehorende zin afhankelijk van de uitkomst
+
+const random = Math.random();
+const glass = (random > 0.5) ? "Het glas is halfvol" : "Het glas is half leeg";
+console.log(`${glass} (${random.toFixed(1)})`);
